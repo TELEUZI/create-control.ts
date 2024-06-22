@@ -1,0 +1,66 @@
+{
+  "projectName": {
+    "message": "Nom du projet\u00a0:"
+  },
+  "shouldOverwrite": {
+    "dirForPrompts": {
+      "current": "Répertoire courant",
+      "target": "Répertoire cible"
+    },
+    "message": "n'est pas vide. Supprimer les fichiers existants et continuer\u00a0?"
+  },
+  "packageName": {
+    "message": "Nom du package\u00a0:",
+    "invalidMessage": "Le nom du package.json est invalide"
+  },
+  "needsTypeScript": {
+    "message": "Ajouter TypeScript\u00a0?"
+  },
+  "needsJsx": {
+    "message": "Ajouter le support de JSX\u00a0?"
+  },
+  "needsRouter": {
+    "message": "Ajouter Vue Router pour le développement d'applications _single page_\u00a0?"
+  },
+  "needsPinia": {
+    "message": "Ajouter Pinia pour la gestion de l'état\u00a0?"
+  },
+  "needsVitest": {
+    "message": "Ajouter Vitest pour les tests unitaires\u00a0?"
+  },
+  "needsMinOrSignals": {
+    "message": "add control.ts/@min or control.ts/@signals",
+    "hint": "- use arrow-keys. return to submit.",
+    "selectoptions": {
+      "negative": {
+        "title": "Non"
+      },
+      "min": {
+        "title": "control.ts/min"
+      },
+      "signals": {
+        "title": "control.ts/signals"
+      }
+    }
+  },
+  "needsEslint": {
+    "message": "Ajouter ESLint pour la qualité du code\u00a0?"
+  },
+  "needsPrettier": {
+    "message": "Ajouter Prettier pour le formatage du code\u00a0?"
+  },
+  "needsDevTools": {
+    "message": "Ajouter l'extension Vue DevTools 7 pour le débogage\u00a0? (expérimental)"
+  },
+  "errors": {
+    "operationCancelled": "Operation annulée"
+  },
+  "defaultToggleOptions": {
+    "active": "Oui",
+    "inactive": "Non"
+  },
+  "infos": {
+    "scaffolding": "Génération du projet dans",
+    "done": "Terminé. Exécutez maintenant\u00a0:"
+  }
+}
