@@ -73,9 +73,6 @@ async function init() {
   // possible options:
   // --default
   // --typescript / --ts
-  // --jsx
-  // --router / --vue-router
-  // --pinia
   // --with-tests / --tests (equals to `--vitest --cypress`)
   // --vitest
   // --cypress
@@ -83,7 +80,6 @@ async function init() {
   // --playwright
   // --eslint
   // --eslint-with-prettier (only support prettier through eslint for simplicity)
-  // --vue-devtools / --devtools
   // --force (for force overwriting)
 
   const args = process.argv.slice(2)
@@ -119,7 +115,7 @@ async function init() {
     ) === 'boolean'
 
   let targetDir = positionals[0]
-  const defaultProjectName = !targetDir ? 'vue-project' : targetDir
+  const defaultProjectName = !targetDir ? 'control.ts-project' : targetDir
 
   const forceOverwrite = argv.force
 
@@ -144,14 +140,11 @@ async function init() {
     //   - enter a valid package name for package.json
     // - Project language: JavaScript / TypeScript
     // - Add JSX Support?
-    // - Install Vue Router for SPA development?
-    // - Install Pinia for state management?
     // - Add Cypress for testing?
     // - Add Nightwatch for testing?
     // - Add Playwright for end-to-end testing?
     // - Add ESLint for code quality?
     // - Add Prettier for code formatting?
-    // - Add Vue DevTools 7 extension for debugging? (experimental)
     result = await prompts(
       [
         {

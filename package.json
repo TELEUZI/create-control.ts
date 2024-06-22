@@ -1,11 +1,11 @@
 {
-  "name": "create-vue",
-  "version": "3.10.3",
-  "description": "An easy way to start a Vue project",
+  "name": "create-control.ts",
+  "version": "0.0.0",
+  "description": "An easy way to start a control.ts project",
   "type": "module",
   "packageManager": "pnpm@9.1.1",
   "bin": {
-    "create-vue": "outfile.cjs"
+    "create-control.ts": "outfile.cjs"
   },
   "files": [
     "locales",
@@ -27,15 +27,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/create-vue.git"
+    "url": "git+https://github.com/TELEUZI/create-control.ts"
   },
   "keywords": [],
   "author": "Haoqun Jiang <haoqunjiang+npm@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vuejs/create-vue/issues"
-  },
-  "homepage": "https://github.com/vuejs/create-vue#readme",
   "devDependencies": {
     "@control.ts/min": "^0.1.10",
     "@control.ts/signals": "^0.0.4",
@@ -43,8 +39,6 @@
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.12.11",
     "@types/prompts": "^2.4.9",
-    "@vue/create-eslint-config": "^0.3.3",
-    "@vue/tsconfig": "^0.5.1",
     "ejs": "^3.1.10",
     "esbuild": "^0.18.20",
     "esbuild-plugin-license": "^1.2.2",
@@ -58,8 +52,12 @@
     "zx": "^8.1.0"
   },
   "lint-staged": {
-    "*.{js,ts,vue,json}": [
+    "*.{js,ts,json}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "@vue/create-eslint-config": "^0.3.3",
+    "@vue/tsconfig": "^0.5.1"
   }
 }

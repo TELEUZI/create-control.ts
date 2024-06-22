@@ -60,8 +60,8 @@ export default function renderEslint(
   const scripts: Record<string, string> = {
     // Note that we reuse .gitignore here to avoid duplicating the configuration
     lint: needsTypeScript
-      ? 'eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore'
-      : 'eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore'
+      ? 'eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore'
+      : 'eslint . --ext .js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore'
   }
 
   // Theoretically, we could add Prettier without requring ESLint.

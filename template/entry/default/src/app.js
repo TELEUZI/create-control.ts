@@ -1,15 +1,11 @@
-import { div$, mount } from '@control.ts/min'
-import { header } from './components/header'
-import { main } from './components/main'
+import './assets/main.css'
 
-const pageElements = [header, main]
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import App from './App.vue'
 
-const page = div$(
-  {
-    className: 'page-wrapper'
-  },
-  ...pageElements
-)
+const app = createApp(App)
 
-const app = document.getElementById('app')
-mount(app, page)
+app.use(createPinia())
+
+app.mount('#app')
