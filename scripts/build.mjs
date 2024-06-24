@@ -1,28 +1,7 @@
 import * as esbuild from 'esbuild'
 import esbuildPluginLicense from 'esbuild-plugin-license'
 
-const CORE_LICENSE = `MIT License
-
-Copyright (c) 2021-present vuejs
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-`
+const CORE_LICENSE = ``
 
 await esbuild.build({
   bundle: true,
@@ -54,14 +33,16 @@ await esbuild.build({
         output: {
           file: 'LICENSE',
           template(allDependencies) {
-            // There's a bug in the plugin that it also includes the `create-vue` package itself
-            const dependencies = allDependencies.filter((d) => d.packageJson.name !== 'create-vue')
+            // There's a bug in the plugin that it also includes the `create-control.ts` package itself
+            const dependencies = allDependencies.filter(
+              (d) => d.packageJson.name !== 'create-control.ts'
+            )
             const licenseText =
-              `# create-vue core license\n\n` +
-              `create-vue is released under the MIT license:\n\n` +
+              `# create-control.ts core license\n\n` +
+              `create-control.ts is released under the MIT license:\n\n` +
               CORE_LICENSE +
               `\n## Licenses of bundled dependencies\n\n` +
-              `The published create-vue artifact additionally contains code with the following licenses:\n` +
+              `The published create-control.ts artifact additionally contains code with the following licenses:\n` +
               [...new Set(dependencies.map((dependency) => dependency.packageJson.license))].join(
                 ', '
               ) +

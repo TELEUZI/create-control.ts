@@ -338,12 +338,6 @@ async function init() {
   render('base')
 
   // Add configs.
-  //if (needsMin) {
-  //  render('config/@control.ts/min')
-  //}
-  //if (needsSignals) {
-  //  render('config/@control.ts/signals')
-  //}
   if (needsVitest) {
     render('config/vitest')
   }
