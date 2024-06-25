@@ -1,4 +1,4 @@
-import { div, mount } from '@control.ts/min'
+import { div, mount } from '@control.ts/signals'
 import { header } from './components/header'
 import { mainFile } from './components/main'
 

@@ -1,4 +1,4 @@
-import { nav, ul, li, a } from '@control.ts/min'
+import { nav$, ul$, li$, a$ } from '@control.ts/signals'
 
 const links = [
   { href: '/', text: 'Home' },
@@ -6,12 +6,12 @@ const links = [
   { href: '/contact', text: 'Contact' }
 ]
 
-export const header = nav(
+export const header = nav$(
   {
     className: 'nav-menu'
   },
-  ul(
+  ul$(
     { className: 'menu' },
-    ...links.map((link) => li({ className: 'menu-item' }, a({ href: link.href, txt: link.text })))
+    ...links.map((link) => li$({ className: 'menu-item' }, a$({ href: link.href, txt: link.text })))
   )
 )

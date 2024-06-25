@@ -1,4 +1,4 @@
-import { nav, ul, li, a } from '@control.ts/min'
+import { nav, ul, li, a } from '@control.ts/signals'
 
 const links = [
   { href: '/', text: 'Home' },

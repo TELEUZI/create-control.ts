@@ -445,12 +445,11 @@ async function init() {
 
   // Render code template.
   // prettier-ignore
-  const codeTemplate =
-    (needsTypeScript ? 'typescript-' : '') +
-    (/*needsRouter ? 'router' : */'default')
+  const entryTemplate = needsSignals ? 'signals' : 'default'
+  const codeTemplate = (needsTypeScript ? 'typescript-' : '') + entryTemplate
   render(`code/${codeTemplate}`)
 
-  render('entry/default')
+  render(`entry/${codeTemplate}`)
 
   // An external data store for callbacks to share data
   const dataStore = {}
@@ -510,7 +509,9 @@ async function init() {
     // Rename entry in `index.html`
     const indexHtmlPath = path.resolve(root, 'index.html')
     const indexHtmlContent = fs.readFileSync(indexHtmlPath, 'utf8')
-    fs.writeFileSync(indexHtmlPath, indexHtmlContent.replace('src/app.ts', 'src/app.ts'))
+    const regex = /\/src\/app\.js/g
+
+    fs.writeFileSync(indexHtmlPath, indexHtmlContent.replace('src/app.js', 'src/app.ts'))
   } else {
     // Remove all the remaining `.ts` files
     preOrderDirectoryTraverse(

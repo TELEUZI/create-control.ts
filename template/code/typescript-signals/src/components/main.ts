@@ -1,4 +1,4 @@
-import { h1$, main$ } from '@control.ts/min'
+import { h1$, main$ } from '@control.ts/signals'
 
 export const mainFile = main$(
   {
