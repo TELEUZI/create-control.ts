@@ -47,8 +47,6 @@ export default function renderEslint(
   }
 
   const { pkg, files } = createESLintConfig({
-    vueVersion: '3.x',
-    // we currently don't support other style guides
     styleGuide: 'default',
     hasTypeScript: needsTypeScript,
     needsPrettier,

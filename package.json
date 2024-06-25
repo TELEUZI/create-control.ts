@@ -30,7 +30,7 @@
     "url": "git+https://github.com/TELEUZI/create-control.ts"
   },
   "keywords": [],
-  "author": "Haoqun Jiang <haoqunjiang+npm@gmail.com>",
+  "author": "Igor Matsiyevskui",
   "license": "MIT",
   "devDependencies": {
     "@control.ts/min": "^0.1.10",

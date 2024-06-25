@@ -1,6 +1,5 @@
 {
   "devDependencies": {
-    "@tsconfig/node20": "^20.1.4",
-    "@vue/tsconfig": "^0.5.1"
+    "@tsconfig/node20": "^20.1.4"
   }
 }

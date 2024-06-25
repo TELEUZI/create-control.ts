@@ -61,13 +61,7 @@ function emptyDir(dir) {
 }
 
 async function init() {
-  console.log(
-    '\n' +
-      (process.stdout.isTTY && process.stdout.getColorDepth() > 8
-        ? banners.gradientBanner
-        : banners.defaultBanner) +
-      '\n'
-  )
+  console.log('\n' + banners.defaultBanner + '\n')
 
   const cwd = process.cwd()
   // possible options:
