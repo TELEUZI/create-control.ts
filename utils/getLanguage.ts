@@ -23,15 +23,11 @@ interface Language {
   shouldOverwrite: LanguageItem
   packageName: LanguageItem
   needsTypeScript: LanguageItem
-  needsJsx: LanguageItem
-  needsRouter: LanguageItem
-  needsPinia: LanguageItem
   needsVitest: LanguageItem
   needsE2eTesting: LanguageItem
   needsMinOrSignals: LanguageItem
   needsEslint: LanguageItem
   needsPrettier: LanguageItem
-  needsDevTools: LanguageItem
   errors: {
     operationCancelled: string
   }
@@ -59,20 +55,6 @@ function linkLocale(locale: string) {
   } catch (error) {
     console.log(`${error.toString()}\n`)
   }
-  switch (linkedLocale) {
-    case 'zh-TW':
-    case 'zh-HK':
-    case 'zh-MO':
-      linkedLocale = 'zh-Hant'
-      break
-    case 'zh-CN':
-    case 'zh-SG':
-      linkedLocale = 'zh-Hans'
-      break
-    default:
-      linkedLocale = locale
-  }
-
   return linkedLocale
 }
 

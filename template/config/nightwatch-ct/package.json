@@ -1,8 +1,5 @@
 {
   "scripts": {
     "test:unit": "nightwatch src/**/__tests__/*"
-  },
-  "devDependencies": {
-    "@vue/test-utils": "^2.4.6"
   }
 }
