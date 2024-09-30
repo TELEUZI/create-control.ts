@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "test:unit": "nightwatch src/**/__tests__/*"
+  }
+}
