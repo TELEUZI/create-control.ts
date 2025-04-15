@@ -1,0 +1,26 @@
+{
+  "name": "typescript-vitest",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "build-only": "vite build"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@types/jsdom": "^21.1.6",
+    "@types/node": "^20.12.11",
+    "jsdom": "^24.1.0",
+    "npm-run-all2": "^6.1.2",
+    "typescript": "~5.4.0",
+    "vite": "^5.2.11",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.0.5"
+  }
+}

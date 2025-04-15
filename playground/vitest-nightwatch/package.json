@@ -1,0 +1,26 @@
+{
+  "name": "vitest-nightwatch",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "test:e2e": "nightwatch tests/e2e/*"
+  },
+  "devDependencies": {
+    "chromedriver": "^124.0.3",
+    "geckodriver": "^4.4.0",
+    "jsdom": "^24.1.0",
+    "nightwatch": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "vite": "^5.2.11",
+    "vite-plugin-nightwatch": "^0.4.6",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.0.5"
+  }
+}
